@@ -1,13 +1,14 @@
 .tray {
+  margin-inline: auto;
   width: 90%;
-  border: 1px salmons;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: first baseline;
+  /* align-items: first baseline; */
 }
 
 .list {
+  margin-inline: auto;
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -19,8 +20,8 @@
 .option {
   background: rgb(241, 241, 241);
   padding-inline: 12px;
-  padding-block: 10px;
-  font-size: 18px;
+  padding-block: clamp(4px, 4vw, 10px);
+  font-size: clamp(14px, 4vw, 18px);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.274);
   border: 1px solid rgba(0, 0, 0, 0.651);
   cursor: pointer;
