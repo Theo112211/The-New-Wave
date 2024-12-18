@@ -10,8 +10,14 @@ export default function Home() {
       <div className={styles.head}>
         <p className={styles.text}>
           {" "}
-          We are open. For support, whatsapp <br /> +233 53 130 6402 / +233 54
-          597 3939 <br />
+          <b>We are open.</b>{" "}
+          <p>
+            For support, WhatsApp <br />
+            <b>
+              {" "}
+              <em> +233 53 130 6402 OR +233 54 597 3939</em>
+            </b>{" "}
+          </p>
           Thank you.
         </p>
       </div>
