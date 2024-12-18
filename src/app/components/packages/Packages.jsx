@@ -51,6 +51,10 @@ const Packages = () => {
         </div>
         <h2>₵ {selectedPackage.price}</h2>
       </div>
+      <div className={styles.note}>
+        <h4>TAKE NOTE</h4>
+        <p>❗❗❗❗❗ Delivery take 20mins to 4hrs ❗❗❗❗❗</p>
+      </div>
     </div>
   );
 };
