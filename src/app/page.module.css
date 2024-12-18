@@ -84,7 +84,7 @@
   width: 80%;
   margin-inline: auto;
   align-items: first baseline;
-  padding-left: 80px;
+  /* padding-left: 80px; */
 }
 
 .label {

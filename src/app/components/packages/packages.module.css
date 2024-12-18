@@ -1,13 +1,15 @@
 .tray {
+  margin-block: 20px;
+  margin-inline: auto;
   width: 90%;
-  border: 1px salmons;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: first baseline;
+  /* align-items: first baseline; */
 }
 
 .list {
+  margin-inline: auto;
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -18,9 +20,9 @@
 
 .option {
   background: rgb(241, 241, 241);
-  padding-inline: 12px;
-  padding-block: 10px;
-  font-size: 18px;
+  padding-inline: clamp(8px, 4vw, 12px);
+  padding-block: clamp(4px, 4vw, 10px);
+  font-size: clamp(14px, 4vw, 18px);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.274);
   border: 1px solid rgba(0, 0, 0, 0.651);
   cursor: pointer;
@@ -36,6 +38,12 @@
   transition: all 0.3s ease-in-out;
 }
 
+.option:active {
+  background: rgb(255, 238, 0);
+  color: white;
+  text-shadow: 0px 0px 6px black;
+}
+
 .note {
   margin-block: 40px;
   display: flex;
@@ -45,10 +53,18 @@
 }
 
 .note h4 {
+  font-size: clamp(16px, 4vw, 20px);
   font-weight: 400;
   color: rgb(49, 49, 49);
 }
 
 .note p {
+  font-size: clamp(11px, 4vw, 20px);
   color: rgb(121, 121, 121);
+}
+
+@media (width<=200px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
