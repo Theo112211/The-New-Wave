@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className={styles.body}>
       <div className={styles.head}>
-        <p className={styles.text}>
+        <div className={styles.text}>
           {" "}
           <b>We are open.</b>{" "}
           <p>
@@ -19,7 +19,7 @@ export default function Home() {
             </b>{" "}
           </p>
           Thank you.
-        </p>
+        </div>
       </div>
       <div className={styles.navbardiv}>
         <Navbar />
