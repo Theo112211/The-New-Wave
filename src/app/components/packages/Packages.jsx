@@ -1,39 +1,55 @@
 "use client";
 
 import React, { useState } from "react";
-// import styles from "../../../app/page.module.css";
 import styles from "./packages.module.css";
 
 const Packages = () => {
-  const [price, setPrice] = useState("0.00");
-  const [size, setSize] = useState("0GB");
+  const [selectedPackage, setSelectedPackage] = useState({
+    size: "",
+    price: "0.00",
+  });
+
+  const packages = [
+    { size: "1GB", price: "5.00" },
+    { size: "2GB", price: "8.00" },
+    { size: "3GB", price: "12.00" },
+    { size: "4GB", price: "15.00" },
+    { size: "5GB", price: "18.00" },
+    { size: "6GB", price: "20.00" },
+    { size: "7GB", price: "25.00" },
+    { size: "8GB", price: "30.00" },
+    { size: "10GB", price: "35.00" },
+    { size: "12GB", price: "40.00" },
+    { size: "15GB", price: "50.00" },
+    { size: "20GB", price: "60.00" },
+    { size: "25GB", price: "70.00" },
+    { size: "30GB", price: "85.00" },
+    { size: "40GB", price: "100.00" },
+    { size: "50GB", price: "120.00" },
+    { size: "100GB", price: "200.00" },
+  ];
+
+  const handlePackageSelect = (pkg) => {
+    setSelectedPackage(pkg);
+  };
 
   return (
     <div>
       <div className={styles.tray}>
-        <h3>Size: {size} </h3>
-
+        <h3>Selected Package: {selectedPackage.size}</h3>
         <div className={styles.list}>
-          <div className={styles.option}>1GB</div>
-          <div className={styles.option}>2GB</div>
-          <div className={styles.option}>3GB</div>
-          <div className={styles.option}>4GB</div>
-          <div className={styles.option}>5GB</div>
-          <div className={styles.option}>6GB</div>
-          <div className={styles.option}>7GB</div>
-          <div className={styles.option}>8GB</div>
-          <div className={styles.option}>10GB</div>
-          <div className={styles.option}>12GB</div>
-          <div className={styles.option}>15GB</div>
-          <div className={styles.option}>20GB</div>
-          <div className={styles.option}>25GB</div>
-          <div className={styles.option}>30GB</div>
-          <div className={styles.option}>40GB</div>
-          <div className={styles.option}>50GB</div>
-          <div className={styles.option}>100GB</div>
+          {packages.map((pkg) => (
+            <div
+              key={pkg.size}
+              className={styles.option}
+              onClick={() => handlePackageSelect(pkg)}
+              title={`${pkg.size} Package`}
+            >
+              {pkg.size}
+            </div>
+          ))}
         </div>
-
-        <h2>₵ {price} </h2>
+        <h2>₵ {selectedPackage.price}</h2>
       </div>
     </div>
   );

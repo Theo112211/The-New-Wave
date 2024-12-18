@@ -36,6 +36,7 @@
   font-size: 30px;
   background: rgba(0, 0, 0, 0.048);
   padding: 20%;
+  cursor: pointer;
   /* font-weight: bolder; */
 }
 
@@ -45,11 +46,15 @@
 
 .menu {
   display: flex;
-  gap: 5px;
+  gap: 7px;
   font-size: 20px;
 }
 
+.link {
+}
+
 .link:hover {
+  cursor: pointer;
   border-bottom: 1px solid black;
   transition: all 0.3s ease-in-out;
 }
