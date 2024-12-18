@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../page.module.css";
-import { CiMenuFries } from "react-icons/ci";
+import { IoMenu } from "react-icons/io5";
 import { IoLogoAndroid } from "react-icons/io";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div> */}
 
         <div>
-          <CiMenuFries className={styles.menuico} />
+          <IoMenu className={styles.menuico} />
         </div>
       </div>
     </div>
