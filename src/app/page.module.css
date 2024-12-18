@@ -41,12 +41,18 @@
 .navbardiv {
   width: 100%;
   padding: 10px;
+  background: #f2f4f6;
+  -webkit-box-shadow: 0 1px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0 1px 16px -8px rgba(0, 0, 0, 0.849);
+  /* border: 1px solid rgba(128, 128, 128, 0.205); */
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-box-shadow: 0 1px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0 1px 16px -8px rgba(0, 0, 0, 0.849);
 }
 
 .logo,
@@ -74,10 +80,6 @@
   cursor: pointer;
   border-bottom: 1px solid black;
   transition: all 0.3s ease-in-out;
-}
-
-.herodiv {
-  /* border: 1px solid ; */
 }
 
 @media (width<=420px) {
@@ -117,4 +119,9 @@
 
 .packages {
   padding: 10px;
+}
+
+.holder {
+  width: 100%;
+  background: #f2f4f6;
 }
