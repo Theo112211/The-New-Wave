@@ -7,16 +7,16 @@ const Navbar = () => {
   return (
     <div>
       <div className={styles.nav}>
-        <h1>
+        <div>
           <IoLogoAndroid className={styles.logo} />
-        </h1>
+        </div>
 
-        <div className={styles.menu}>
+        {/* <div className={styles.menu}>
           <a className={styles.link}>Home</a>
           <a className={styles.link}>Shop</a>
           <a className={styles.link}>Cart</a>
           <a className={styles.link}>Checkout</a>
-        </div>
+        </div> */}
 
         <div>
           <CiMenuFries className={styles.menuico} />

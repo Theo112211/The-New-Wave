@@ -8,9 +8,16 @@ export default function Home() {
   return (
     <div className={styles.body}>
       <div className={styles.head}>
-        We are open. For support, whatsapp .......... . Thank you.
+        <p className={styles.text}>
+          {" "}
+          We are open. For support, whatsapp <br /> +233 53 130 6402 / +233 54
+          597 3939 <br />
+          Thank you.
+        </p>
       </div>
-      <Navbar />
+      <div className={styles.navbardiv}>
+        <Navbar />
+      </div>
       <Herosection />
       <div className={styles.wrapper}>
         <div className={styles.label}>Home / Data / MTN</div>
@@ -20,7 +27,6 @@ export default function Home() {
       </div>
 
       <Packages />
-      
     </div>
   );
 }
